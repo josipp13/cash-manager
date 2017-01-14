@@ -16,7 +16,7 @@ class Account
     private $balance;
     private $transactions;
 
-    function __construct($balance=Balance(0))
+    public function __construct(\Balance\Balance $balance = null)
     {
         $this->balance=$balance;
         $this->transactions=new Transactions();
