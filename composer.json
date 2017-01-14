@@ -6,8 +6,9 @@
     "psr-4": {
       "Currency\\": "Currency/",
       "Data\\": "Data/",
-      "Account\\":"Account/",
-      "Balance\\": "Balance/"
+      "Account\\": "Account/",
+      "Balance\\": "Balance/",
+      "Transaction\\": "Transaction/"
     }
   }
 }
