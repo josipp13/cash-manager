@@ -1,13 +1,24 @@
 <?php
 namespace Account;
-use Data\DataStructure;
+use Balance\Balance;
+use Transaction\Transactions;
 class Account
 {
+    /**
+     * @var Balance|null
+     */
     private $balance;
+    /**
+     * @var Transactions
+     */
     private $transactions;
-    public function __construct(\Balance\Balance $balance = null)
+    /**
+     * Account constructor.
+     * @param Balance|null $balance
+     */
+    public function __construct(Balance $balance = null)
     {
-        $this->balance=$balance;
-        $this->transactions=new Transactions();
+        $this->balance = $balance;
+        $this->transactions = new Transactions();
     }
 }
