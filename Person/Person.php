@@ -17,13 +17,16 @@ class Person
 
     }
 
+
     public function setDataStructure(DataStructureReaderInterface $dataStructure)
     {
-            $this->dataStructure = $dataStructure;
+        $this->dataStructure = $dataStructure;
     }
+
+
 
     public function name() : string
     {
-             return $this->dataStructure->getValue('person_name');
+        return $this->dataStructure->getValue('person_name');
     }
 }
