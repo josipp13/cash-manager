@@ -13,7 +13,7 @@ class Person
     public function __constructor(DataStructureReaderInterface $dataStructure = null)
     {
 
-        $this->dataStructure = dataStructure;
+        $this->dataStructure = $dataStructure;
 
     }
 
