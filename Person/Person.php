@@ -9,7 +9,6 @@ class Person
 {
     private $dataStructure;
 
-
     public function __constructor(DataStructureReaderInterface $dataStructure = null)
     {
 
@@ -22,7 +21,6 @@ class Person
     {
         $this->dataStructure = $dataStructure;
     }
-
 
 
     public function name() : string
