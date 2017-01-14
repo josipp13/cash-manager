@@ -25,6 +25,9 @@ class Transactions implements SeekableIterator
         $this->position = 0;
     }
 
+    /**
+     * @param Transaction $transaction
+     */
     public function add(Transaction $transaction)
     {
         $this->transactions[] = $transaction;

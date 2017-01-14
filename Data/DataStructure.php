@@ -12,6 +12,10 @@ class DataStructure implements DataStructureReaderInterface
      */
     private $plainDataStructure;
 
+    /**
+     * DataStructure constructor.
+     * @param array $data
+     */
     public function __construct($data = [])
     {
         $this->plainDataStructure = $data;
