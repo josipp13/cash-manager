@@ -3,20 +3,20 @@
 namespace Balance;
 
 use Exception;
-use \Data\DataStructure;
+use \Data\DataStructureReaderInterface;
 
 class Balance
 {
     /**
-     * @var \Data\DataStructure
+     * @var \Data\DataStructureReaderInterface
      */
     private $balanceData;
 
     /**
      * Balance constructor.
-     * @param DataStructure $dataStructure
+     * @param DataStructureReaderInterface $dataStructure
      */
-    public function __construct(DataStructure $dataStructure)
+    public function __construct(DataStructureReaderInterface $dataStructure)
     {
         $this->balanceData = $dataStructure;
     }
