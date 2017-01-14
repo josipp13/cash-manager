@@ -35,5 +35,15 @@ class Currency
     public function name() : string
     {
         return $this->dataStructure->getValue('currency_name');
+
     }
+
+
+    public function sign():string
+    {
+        return $this->dataStructure->getValue('currency_sign');
+
+
+    }
+
 }
