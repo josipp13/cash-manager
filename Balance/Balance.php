@@ -4,6 +4,7 @@ namespace Balance;
 
 use Exception;
 use \Data\DataStructureReaderInterface;
+use \Currency\Currency;
 
 class Balance
 {
@@ -28,5 +29,13 @@ class Balance
     public function currentBalance() : float
     {
         return $this->balanceData->getValue('current_state');
+    }
+
+    /**
+     * @return \Currency\Currency
+     */
+    public function currency() : Currency
+    {
+        return $this->balanceData->getValue('currency');
     }
 }

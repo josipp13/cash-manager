@@ -1,24 +1,40 @@
 <?php
+
 namespace Account;
-use Balance\Balance;
+
+use Data\DataStructureReaderInterface;
+use Person\Person;
 use Transaction\Transactions;
+
 class Account
 {
     /**
-     * @var Balance|null
+     * @var DataStructureReaderInterface
      */
-    private $balance;
-    /**
-     * @var Transactions
-     */
-    private $transactions;
+    private $accountData;
+
     /**
      * Account constructor.
-     * @param Balance|null $balance
+     * @param DataStructureReaderInterface $dataStructure
      */
-    public function __construct(Balance $balance = null)
+    public function __construct(DataStructureReaderInterface $dataStructure)
     {
-        $this->balance = $balance;
-        $this->transactions = new Transactions();
+        $this->accountData = $dataStructure;
+    }
+
+    /**
+     * @return Transactions
+     */
+    public function transactions() : Transactions
+    {
+        return $this->accountData->getValue('transaction_list');
+    }
+
+    /**
+     * @return Person
+     */
+    public function person() : Person
+    {
+        return $this->accountData->getValue('person');
     }
 }
