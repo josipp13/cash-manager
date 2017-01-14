@@ -11,7 +11,6 @@ class Person
      * @var DataStructureReaderInterface
      */
     private $dataStructure;
-
     /**
      * Person constructor.
      * @param DataStructureReaderInterface|null $dataStructure
