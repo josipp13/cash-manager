@@ -3,21 +3,20 @@
 namespace Balance;
 
 use Exception;
-use \Data\DataStructureReaderInterface;
-use \Currency\Currency;
+use \Data\DataStructure;
 
 class Balance
 {
     /**
-     * @var \Data\DataStructureReaderInterface
+     * @var \Data\DataStructure
      */
     private $balanceData;
 
     /**
      * Balance constructor.
-     * @param DataStructureReaderInterface $dataStructure
+     * @param DataStructure $dataStructure
      */
-    public function __construct(DataStructureReaderInterface $dataStructure)
+    public function __construct(DataStructure $dataStructure)
     {
         $this->balanceData = $dataStructure;
     }
@@ -29,13 +28,5 @@ class Balance
     public function currentBalance() : float
     {
         return $this->balanceData->getValue('current_state');
-    }
-
-    /**
-     * @return \Currency\Currency
-     */
-    public function currency() : Currency
-    {
-        return $this->balanceData->getValue('currency');
     }
 }

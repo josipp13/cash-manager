@@ -3,27 +3,20 @@
 
 namespace Person;
 
-use Data\DataStructureReaderInterface;
+use Data\DataStructure;
 
 class Person
 {
     /**
-     * @var DataStructureReaderInterface
+     * @var DataStructure
      */
     private $dataStructure;
-    /**
-     * Person constructor.
-     * @param DataStructureReaderInterface|null $dataStructure
-     */
-    public function __construct(DataStructureReaderInterface $dataStructure = null)
-    {
-        $this->dataStructure = $dataStructure;
-    }
 
     /**
-     * @param DataStructureReaderInterface $dataStructure
+     * Person constructor.
+     * @param DataStructure $dataStructure
      */
-    public function setDataStructure(DataStructureReaderInterface $dataStructure)
+    public function __construct(DataStructure $dataStructure)
     {
         $this->dataStructure = $dataStructure;
     }
