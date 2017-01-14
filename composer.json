@@ -5,7 +5,11 @@
   "autoload": {
     "psr-4": {
       "Currency\\": "Currency/",
-      "Data\\": "Data/"
+      "Data\\": "Data/",
+      "Account\\":"Account/"
     }
+
+
+
   }
 }
