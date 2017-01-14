@@ -11,6 +11,10 @@ class Transaction
      */
     private $transactionData;
 
+    /**
+     * Transaction constructor.
+     * @param DataStructureReaderInterface $data
+     */
     public function __construct(DataStructureReaderInterface $data)
     {
         $this->transactionData = $data;

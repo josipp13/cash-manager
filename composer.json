@@ -9,7 +9,8 @@
       "Account\\": "Account/",
       "Balance\\": "Balance/",
       "Transaction\\": "Transaction/",
-      "Person\\": "Person/"
+      "Person\\": "Person/",
+      "Factory\\": "Factory/"
     }
   }
 }
