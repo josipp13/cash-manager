@@ -4,7 +4,7 @@ namespace Data;
 
 use \Exception;
 
-class DataStructure implements DataStructureReaderInterface
+class DataStructure implements DataStructureReaderInterface, DataStructureWriterInterface
 {
     /**
      * Represents plain data organized as key value array
@@ -33,5 +33,14 @@ class DataStructure implements DataStructureReaderInterface
             throw new Exception('Key ' . $name . ' can not be found');
         }
         return $this->plainDataStructure[$name];
+    }
+
+    /**
+     * @param string $name
+     * @param mixed $value
+     */
+    public function setValue($name, $value)
+    {
+        $this->plainDataStructure[$name] = $value;
     }
 }

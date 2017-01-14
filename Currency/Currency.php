@@ -2,28 +2,20 @@
 
 namespace Currency;
 
-use Data\DataStructureReaderInterface;
+use Data\DataStructure;
 
 class Currency
 {
     /**
-     * @var DataStructureReaderInterface
+     * @var DataStructure
      */
     private $dataStructure;
 
     /**
      * Currency constructor.
-     * @param DataStructureReaderInterface $dataStructure
+     * @param DataStructure $dataStructure
      */
-    public function __construct(DataStructureReaderInterface $dataStructure = null)
-    {
-        $this->dataStructure = $dataStructure;
-    }
-
-    /**
-     * @param DataStructureReaderInterface $dataStructure
-     */
-    public function setDataStructure(DataStructureReaderInterface $dataStructure)
+    public function __construct(DataStructure $dataStructure = null)
     {
         $this->dataStructure = $dataStructure;
     }
