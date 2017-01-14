@@ -1,11 +1,7 @@
 <?php
-
-
 namespace Account;
-
 use Balance\Balance;
 use Transaction\Transactions;
-
 class Account
 {
     /**
@@ -16,7 +12,6 @@ class Account
      * @var Transactions
      */
     private $transactions;
-
     /**
      * Account constructor.
      * @param Balance|null $balance
@@ -25,6 +20,5 @@ class Account
     {
         $this->balance = $balance;
         $this->transactions = new Transactions();
-
     }
 }
