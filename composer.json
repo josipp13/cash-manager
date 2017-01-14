@@ -7,7 +7,8 @@
       "Currency\\": "Currency/",
       "Data\\": "Data/",
       "Account\\":"Account/",
-      "Balance\\": "Balance/"
+      "Balance\\": "Balance/",
+      "Person\\":"Person/"
     }
   }
 }
