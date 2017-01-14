@@ -5,6 +5,7 @@ namespace Account;
 use Data\DataStructureReaderInterface;
 use Person\Person;
 use Transaction\Transactions;
+use Currency\Currency;
 
 class Account
 {
@@ -36,5 +37,13 @@ class Account
     public function person() : Person
     {
         return $this->accountData->getValue('person');
+    }
+
+    /**
+     * @return \Currency\Currency
+     */
+    public function currency() : Currency
+    {
+        return $this->accountData->getValue('currency');
     }
 }
